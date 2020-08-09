@@ -1,5 +1,5 @@
 # WinSpotlightGNOME
-A utility for automatically downloading Windows Spotlight images, and setting them as your desktop, lock screen, and display manager background in GNOME.
+A utility for automatically downloading Windows Spotlight images, and setting them as your desktop, lock screen, and display manager background in GNOME. Modified from [my own tool for doing the same thing on KDE.](https://github.com/ryangwsimmons/WinSpotlightKDE)
 
 This project is specifically for Linux systems using systemd and running GNOME, such as Ubuntu, Manjaro GNOME, or Fedora Workstation. However, with a little work, it could easily be modified to work with other desktop environments, or with an alternative to systemd timers such as cron.
 <br/><br/><br/>
