@@ -1,0 +1,7 @@
+[Unit]
+Description=WinSpotlightGNOME
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/opt/winspotlightgnome

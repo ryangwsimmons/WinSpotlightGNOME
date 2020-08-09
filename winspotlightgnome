@@ -16,20 +16,13 @@ locale=en-US
 country=us
 
 # Path that downloaded Spotlight images will be saved to
-imgPath=$HOME/.winspotlightkde/
+imgPath=$HOME/.winspotlightgnome/
 
 # Images in the specified directory above will be deleted after this number of days
 deleteImagesAfterNumDays=3
 
 # If set to yes, the desktop background will be updated when new Spotlight images are downloaded
 setDesktop=yes
-
-# If set to yes, the lockscreen background will be updated when new Spotlight images are downloaded
-setLockscreen=yes
-
-# If set to yes, the display manager background will be updated when new Spotlight images are downloaded
-setDM=yes
-
 
 
 
@@ -64,19 +57,7 @@ curl -s $imageURL -o ${imgName}
 
 # Set the wallpaper for the desktop
 if [ "$setDesktop" == "yes" ]; then
-        qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "var allDesktops = desktops();
-        print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = 'org.kde.image';
-        d.currentConfigGroup = Array('Wallpaper', 'org.kde.image', 'General');d.writeConfig('Image', 'file://${imgName}')}"
-fi
-
-# Set the wallpaper for the lockscreen
-if [ "$setLockscreen" == "yes" ]; then
-        kwriteconfig5 --file $HOME/.config/kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "file://${imgName}"
-fi
-
-# Set the wallpaper for the display manager (log-in screen)
-if [ "$setDM" == "yes" ]; then
-        cp ${imgName} /usr/share/sddm/themes/winspotlightkde/sddm.jpeg
+        gsettings set org.gnome.desktop.background picture-uri file://${imgName}
 fi
 
 # Delete any images that are old enough, as specified by the "deleteImagesAfterNumDays" variable

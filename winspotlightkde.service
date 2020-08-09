@@ -1,7 +1,0 @@
-[Unit]
-Description=WinSpotlightKDE
-After=network-online.target
-
-[Service]
-Type=simple
-ExecStart=/opt/winspotlightkde
