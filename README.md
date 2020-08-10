@@ -22,7 +22,7 @@ Thank you to [ORelio](https://github.com/ORelio/Spotlight-Downloader) on GitHub 
     ```
     sudo cp winspotlightgnome /opt/
     ```
-5. Copy the WinSpotlightgnome `.service` and `.timer` files to the systemd user unit directory:
+5. Copy the WinSpotlightGNOME `.service` and `.timer` files to the systemd user unit directory:
     ```
     sudo cp winspotlightgnome.service winspotlightgnome.timer /usr/lib/systemd/user/
     ```
