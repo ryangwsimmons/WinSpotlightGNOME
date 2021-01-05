@@ -12,6 +12,17 @@ Thank you to [ORelio](https://github.com/ORelio/Spotlight-Downloader) on GitHub 
 - [Jq](https://stedolan.github.io/jq/) (for parsing JSON returned by the API)
 
 ## Installation
+### Using the Debian Package (Recommended)
+If you're on Debian, Ubuntu, or any of their derivates, you can use the provided debian package to install the utility:
+1. Download the latest `.deb` file from the [releases](https://github.com/ryangwsimmons/WinSpotlightGNOME/releases) page.
+2. Install the `.deb` package using your utility of choice (double-clicking the download works most of the time, otherwise google it)
+3. Run the following commands in a terminal window:
+    ```
+    systemctl --user daemon-reload
+    systemctl --user enable winspotlightgnome.timer
+    systemctl --user start winspotlightgnome.timer
+    ```
+### Installing Manually
 1. Clone or download this repo.
 2. Open a terminal and `cd` into the repo folder that you downloaded.
 3. Make the `winspotlightgnome` script executable:
