@@ -1,10 +1,9 @@
 # WinSpotlightGNOME
-A utility for automatically downloading Windows Spotlight images, and setting them as your desktop background in GNOME. Modified from [my own tool for doing the same thing on KDE](https://github.com/ryangwsimmons/WinSpotlightKDE).
+A utility for automatically downloading the Bing photo of the day, and setting it as your desktop background in GNOME. Modified from [my own tool for doing the same thing on KDE](https://github.com/ryangwsimmons/WinSpotlightKDE). The name comes from the fact that this utility originally downloaded Windows Spotlight images, however the API for that service is private, and the endpoint appears to have changed, so unfortunately it is no longer possible for me to fetch images from  that source.
 
 This project is specifically for Linux systems using systemd and running GNOME, such as Ubuntu, Manjaro GNOME, or Fedora Workstation. However, with a little work, it could easily be modified to work with other desktop environments, or with an alternative to systemd timers such as cron.
 <br/><br/><br/>
 
-Thank you to [ORelio](https://github.com/ORelio/Spotlight-Downloader) on GitHub for their documentation on how the Spotlight API works. Without it, this project would have been significantly harder to finish.
 
 ## Dependencies
 - Bash (may work with other shells, but this has not been tested)
@@ -50,17 +49,8 @@ If you're on Debian, Ubuntu, or any of their derivates, you can use the provided
 ## Configuration
 The following options can be changed by modifying the `winspotlightgnome` script, changing the various variables at the top of the file:
 
-### **hRes**
-The horizontal resolution of the image that will be downloaded. Normally, this should be set to the horizontal resolution of your monitor.
-
-### **vRes**
-The vertical resolution of the image that will be downloaded. Same deal as above.
-
 ### **locale**
-An option sent to the Spotlight API. Since the Spotlight API isn't well documented, I'm not sure exactly what this does, but presumably it affects what kind of images the API sends to you.
-
-### **country**
-Same as above.
+An option sent to the Bing API to determine which photos are downloaded. If desired, you should change this to your current locale (i.e. en-US, en-CA, etc.).
 
 ### **imgPath**
 The path where images downloaded by the utility will be stored.
