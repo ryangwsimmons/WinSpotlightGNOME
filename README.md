@@ -12,7 +12,7 @@ This project is specifically for Linux systems using systemd and running GNOME, 
 
 ## Installation
 ### Using the Debian Package (Recommended)
-If you're on Debian, Ubuntu, or any of their derivates, you can use the provided debian package to install the utility:
+If you're on Debian, Ubuntu, or any of their derivatives, you can use the provided debian package to install the utility:
 1. Download the latest `.deb` file from the [releases](https://github.com/ryangwsimmons/WinSpotlightGNOME/releases) page.
 2. Install the `.deb` package using your utility of choice (double-clicking the download works most of the time, otherwise google it)
 3. Run the following commands in a terminal window:
